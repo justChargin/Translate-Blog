@@ -12,7 +12,7 @@ window.onload = () => {
     let sonuc = '';
 
     function aRoute(user){
-        window.location.href = 'file:///C:/Users/Byte/Desktop/Translate%20Blog/routes/' + user + '.html';
+        window.location.href = 'file:///C:/Users/Byte/Desktop/Git%20Files/AllFiles/Translate%20Blog/routes/' + user + '.html';
     }
 
     main.addEventListener('click', (e) => {
