@@ -23,7 +23,7 @@ class Users{
     control = (userName, password) => {
         this.userName = userName;
         this.password = password;
-        console.log('username: ' + this.userName + ' password: ' +this.password );
+        console.log('username: ' + this.userName + ' password: ' + this.password);
     }
 
     listenEvents = () => {
@@ -41,7 +41,7 @@ class Users{
             else if(this.userKey === 'submit'){
                 this.inputPassword = document.querySelector('#pwd').value;
                 if(this.inputPassword === this.password){
-                    this.addr = './routes/' + this.userName.toLowerCase() + '.html';
+                    this.addr = './routes/' + this.userName.toLowerCase() + '.html?id=' + this.userName;
                     window.open(this.addr, '_self');
                     
                     this.wrongPwd.style.display = 'none';                    
@@ -61,4 +61,6 @@ window.onload = () => {
     const user = new Users;
     user.allFunctions();
 }
+
+
 

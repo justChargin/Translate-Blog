@@ -1,0 +1,26 @@
+[
+    {
+        "owner" : "userA",
+        "topic" : "User A's First Topic",
+        "header" : "User A's First Header",
+        "content" : "User A's First Content"
+    },
+    {
+        "owner" : "userA",
+        "topic" : "Second Topic",
+        "header" : "Second Header",
+        "content" : "Post Content About Second Post"
+    },
+    {
+        "owner" : "userB",
+        "topic" : "User B's First Topic",
+        "header" : "User B's First Header",
+        "content" : "User B's First Content"
+    },
+    {
+        "owner" : "userB",
+        "topic" : "Second Topic",
+        "header" : "Second Header",
+        "content" : "Post Content About Second Post"
+    }
+]
