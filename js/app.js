@@ -41,8 +41,9 @@ class Users{
             else if(this.userKey === 'submit'){
                 this.inputPassword = document.querySelector('#pwd').value;
                 if(this.inputPassword === this.password){
-                    //window.open('./routes/' + this.userName + '.html', '_self');
-                    window.open('./routes/usera.html', '_self');
+                    this.addr = './routes/' + this.userName.toLowerCase() + '.html';
+                    window.open(this.addr, '_self');
+                    
                     this.wrongPwd.style.display = 'none';                    
                 }else{
                     this.wrongPwd.style.display = 'block'; //class ekleyip transition 3s
