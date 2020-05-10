@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Translate Blog</title>
+    <title>Local Blog</title>
     <script src="js/app.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,23 +12,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap" rel="stylesheet">
 </head>
-<style>
-</style>
 <body>
-    <nav class="navbar bg-light shadow-lg navbar-expand">
-        <ul class="nav navbar-nav mx-auto">
-            <li class="nav-item"><a href="#" class="nav-link">Translate Blog</a></li>
-        </ul>
-    </nav>
-
-    <div class="container container-margin">
-        <div class="modal fade" id="myModal">
-            <div class="modal-dialog">
-              <div class="modal-content">
+<nav class="navbar bg-light shadow-lg navbar-expand">
+    <ul class="nav navbar-nav mx-auto">
+        <li class="nav-item"><a href="#" class="nav-link">Translate Blog</a></li>
+    </ul>
+</nav>
+<div class="container container-margin">
     
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title">Sign In</h4>
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 
                 <div class="modal-body text-center justify-content-center">
@@ -37,42 +34,40 @@
                             <label for="pwd">Password:</label>
                             <input type="password" class="form-control" id="pwd" name="password">
                             <label id="wrongPwd" class="text-danger mt-2">Wrong Password</label>
-
                         </div>
                         <button class="btn btn-primary" data-key="submit">Submit</button>
                     </div>
                 </div>
     
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        
-        <div class="row justify-content-center">
-            <div class="col-md-4 col-lg-4">
-                <div class="card text-center shadow-lg mt-5 mb-5">
-                    <div class="card-body">
-                        <img src="img\sample 1.jpg" class="img-custom shadow-sm mb-3 shadow-sm">
-                        <h3 class="card-title">User A</h3>
-                        <p class="card-text">Description About This User</p>
-                        <button class="btn btn-outline-dark btn-sm mt-3" data-toggle="modal" data-target="#myModal" data-key="userA">Show My Blog</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4">
-                <div class="card text-center shadow-lg mt-5 mb-3">
-                    <div class="card-body">
-                        <img src="img/sample 2.jpeg" class="img-custom shadow-sm mb-3 shadow-sm">
-                        <h3 class="card-title">User B</h3>
-                        <p class="card-text">Description About This User</p>
-                        <button class="btn btn-outline-dark btn-sm mt-3" data-toggle="modal" data-target="#myModal" data-key="userB">Show My Blog</button>
-                    </div>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-6">
+            <div class="card text-center shadow-lg mt-5 mb-5">
+                <div class="card-body">
+                    <img src="img\sample 1.jpg" class="img-custom shadow-sm mb-3 shadow-sm">
+                    <h3 class="card-title">User A</h3>
+                    <p class="card-text">Description About This User</p>
+                    <button class="btn btn-outline-dark btn-sm mt-3" data-toggle="modal" data-target="#myModal" data-key="userA">Show My Blog</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="card text-center shadow-lg mt-5 mb-3">
+                <div class="card-body">
+                    <img src="img/sample 2.jpeg" class="img-custom shadow-sm mb-3 shadow-sm">
+                    <h3 class="card-title">User B</h3>
+                    <p class="card-text">Description About This User</p>
+                    <button class="btn btn-outline-dark btn-sm mt-3" data-toggle="modal" data-target="#myModal" data-key="userB">Show My Blog</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

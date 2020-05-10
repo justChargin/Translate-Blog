@@ -1,13 +1,12 @@
 class Users{
-    constructor(deneme){
+    constructor(){
         this.main = document.querySelector('.container');
         this.wrongPwd = document.querySelector('#wrongPwd');
         this.wrongPwd.style.display = 'none';
     }
 
     allFunctions = () => {
-        this.listenEventsForUsers();
-        this.listenEventsForSubmit();
+        this.listenEvents();
         this.imageSize();
     }
 
@@ -27,32 +26,23 @@ class Users{
         console.log('username: ' + this.userName + ' password: ' +this.password );
     }
 
-    listenEventsForUsers = () => {
+    listenEvents = () => {
         this.main.addEventListener('click', (e) => {
             this.userKey = e.target.dataset.key;
 
+            //local database
             if(this.userKey === 'userA'){
                 this.control(this.userKey, 'şifrea');
             }else if(this.userKey === 'userB'){
                 this.control(this.userKey, 'şifreb');
-            }else{
-                return;
             }
-        })
-    }
 
-    listenEventsForSubmit = () => {
-        this.main.addEventListener('click', (e) => {
-            this.submitKey = e.target.dataset.key;            
-            if(this.submitKey === 'submit'){
+            //password controls
+            else if(this.userKey === 'submit'){
                 this.inputPassword = document.querySelector('#pwd').value;
-                this.wrongPwd = document.querySelector('#wrongPwd');
-
                 if(this.inputPassword === this.password){
-                    console.log(this.userName + ' logged in.');
-                    this.wrongPwd.style.display = 'none';
-
-                    document.querySelector('#pwd').value = '';
+                    window.open('routes/usera.html', '_self');
+                    this.wrongPwd.style.display = 'none';                    
                 }else{
                     this.wrongPwd.style.display = 'block'; //class ekleyip transition 3s
 
@@ -66,6 +56,7 @@ class Users{
 }
 
 window.onload = () => {
-    const user = new Users('oldu mu');
+    const user = new Users;
     user.allFunctions();
 }
+
