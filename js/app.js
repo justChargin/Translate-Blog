@@ -1,4 +1,7 @@
+import {LoadDocs} from './loadDocs.js';
+
 class Users{
+
     constructor(){
         this.main = document.querySelector('.container');
         this.wrongPwd = document.querySelector('#wrongPwd');
@@ -20,17 +23,21 @@ class Users{
         };
     }
 
+    routeFor = (name) => {
+        this.addr = './routes/allPosts.html?id=' + name;
+        window.open(this.addr, '_self');
+    }
+
     control = (userName, password) => {
-        this.userName = userName;
+        this.userName = userName.toLowerCase();
         this.password = password;
-        console.log('username: ' + this.userName + ' password: ' + this.password);
     }
 
     listenEvents = () => {
         this.main.addEventListener('click', (e) => {
             this.userKey = e.target.dataset.key;
 
-            //local database
+            //LOCAL DATABASE (MANUAL)
             if(this.userKey === 'userA'){
                 this.control(this.userKey, 'şifrea');
             }else if(this.userKey === 'userB'){
@@ -41,13 +48,10 @@ class Users{
             else if(this.userKey === 'submit'){
                 this.inputPassword = document.querySelector('#pwd').value;
                 if(this.inputPassword === this.password){
-                    this.addr = './routes/' + this.userName.toLowerCase() + '.html?id=' + this.userName;
-                    window.open(this.addr, '_self');
-                    
+                    this.routeFor(this.userName);
                     this.wrongPwd.style.display = 'none';                    
                 }else{
-                    this.wrongPwd.style.display = 'block'; //class ekleyip transition 3s
-
+                    this.wrongPwd.style.display = 'block';
                     document.querySelector('#pwd').value = '';
                 }
             }else{
@@ -58,9 +62,13 @@ class Users{
 }
 
 window.onload = () => {
+    const load = new LoadDocs;
     const user = new Users;
+
+    load.loadDoc('#navSection', 'routes/header.html');
     user.allFunctions();
 }
+
 
 
 

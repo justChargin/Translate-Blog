@@ -7,7 +7,7 @@
     },
     {
         "owner" : "userA",
-        "topic" : "Second Topic",
+        "topic" : "userA's Second Topic",
         "header" : "Second Header",
         "content" : "Post Content About Second Post"
     },
@@ -19,7 +19,7 @@
     },
     {
         "owner" : "userB",
-        "topic" : "Second Topic",
+        "topic" : "userB's Second Topic",
         "header" : "Second Header",
         "content" : "Post Content About Second Post"
     }
